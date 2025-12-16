@@ -16,7 +16,7 @@ st.set_page_config(
 # ==================================================
 @st.cache_resource
 def load_model():
-    return joblib.load("model_telemarketing_campaign.sav")
+    return joblib.load("model_telemarketing_campaign.pkl")
 
 model = load_model()
 
@@ -133,3 +133,4 @@ if st.button("🔍 Predict"):
         st.success(f"✅ **Subscribe**\n\nProbability: **{pred_prob:.2%}**")
     else:
         st.error(f"❌ **Not Subscribe**\n\nProbability: **{pred_prob:.2%}**")
+
